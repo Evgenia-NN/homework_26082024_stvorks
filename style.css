@@ -1,0 +1,63 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.stvorks {
+    position: relative;
+    width: 800px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 2s ease;
+}
+
+.stvr-1 {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-color: chocolate;
+    border: 3px solid brown;
+    z-index: 2;
+    transform-origin: left;
+}
+
+.stvr-2 {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    background-color: chocolate;
+    border: 3px solid brown;
+    top: 0px;
+    left: 400px;
+    z-index: 2;
+    transform-origin: right;
+}
+
+.text {
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: bold;
+    position: absolute;
+    top: 130px;
+    left: 340px;
+}
+
+.stvorks:hover .stvr-1 {
+    transform: rotateY(60deg);
+}
+
+.stvorks:hover .stvr-2 {
+    transform: rotateY(-60deg);
+}
+
